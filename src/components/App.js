@@ -4,6 +4,7 @@ import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FlipMove from "react-flip-move";
 
 library.add(faTrash);
 
@@ -83,7 +84,9 @@ class App extends Component {
             <button type="submit">Add</button>
           </form>
         </header>
-        {this.handleListItems()}
+        <FlipMove duration={300} easing="ease-in-out">
+          {this.handleListItems()}
+        </FlipMove>
       </div>
     );
   }
